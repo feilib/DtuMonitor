@@ -1,0 +1,3 @@
+[submodule "CommLib"]
+	path = CommLib
+	url = https://github.com/xflord/CommLib

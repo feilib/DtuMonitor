@@ -78,5 +78,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommLib\CommLib.Log\CommLib.Log.csproj">
+      <Project>{6873fc76-bce5-4bc5-9622-f7f36c0205bb}</Project>
+      <Name>CommLib.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommLib\CommLib.ShareFun\CommLib.ShareFun.csproj">
+      <Project>{a9c1fd67-ba3f-4d33-b62c-4d175300a46f}</Project>
+      <Name>CommLib.ShareFun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
