@@ -25,6 +25,7 @@ namespace MonitorServer
             cfg = new Config();
             txtLocalIp.Text = cfg.LocalIp;
             txtLocalPort.Text = cfg.LocalPort.ToString();
+            txtHeartBeatTimeOut.Text = cfg.HeartBeatTimeOutSecond.ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -43,11 +44,18 @@ namespace MonitorServer
                 return;
             }
 
+            if (!Funs.CheckStringOnlyHaveNumber(txtHeartBeatTimeOut.Text))
+            {
+                MessageBox.Show("超时时间不对，请检查！");
+                return;
+            }
+
             #endregion
 
             //保存
             cfg.LocalIp = txtLocalIp.Text;
             cfg.LocalPort = int.Parse(txtLocalPort.Text);
+            cfg.HeartBeatTimeOutSecond = int.Parse(txtHeartBeatTimeOut.Text);
 
             cfg.Write();
 
