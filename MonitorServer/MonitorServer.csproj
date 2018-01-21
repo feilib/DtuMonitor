@@ -45,6 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="LocalServerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalServerSetting.Designer.cs">
+      <DependentUpon>LocalServerSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Monitor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LocalServerSetting.resx">
+      <DependentUpon>LocalServerSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Monitor.resx">
       <DependentUpon>Monitor.cs</DependentUpon>
     </EmbeddedResource>
