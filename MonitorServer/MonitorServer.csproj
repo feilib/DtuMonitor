@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="DtuClient.cs" />
     <Compile Include="LocalServerSetting.cs">
       <SubType>Form</SubType>
     </Compile>
