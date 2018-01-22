@@ -65,6 +65,9 @@ namespace MonitorServer
 
         //正在处理接受事件。。
         private bool isReceiving = false;
+
+        //是否第一次进入，第一次进来的时候有注册包，要收这个数据。。
+        private bool isFirstEnter = true;
         /// <summary>
         /// 数据已经收到
         /// </summary>
